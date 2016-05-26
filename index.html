@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            
+        <title>Learn to Learn:  Facts About Learning</title>
+
+        <meta name="author" content="Rémi Emonet (@remiemonet)">
+        <meta name="venue" content="Web En Vert">
+        <meta name="date" content="2016-05-25">
+        <meta name="twitter" content="@remiemonet">
+        <meta name="github" content="@twitwi">
+
+        <style type="text/css">
+
+.resources em {font-family: Arial; }
+.subinfo {font-size: 50%;}
+
+.growth li>ul { font-size: 75%;}
+
+.side {
+   background: rgba(0,0,0,.4);
+   list-style: none;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   padding-right: 1em;
+}
+
+.title-slide h1 {color: lime;}
+
+.minion * {
+   color: black !important;
+}
+.minion>.slide {
+   background-image: linear-gradient(to bottom right, rgba(255,255,255, .6),  rgba(255, 255, 255, .4)), url('media/minion-question.jpg');
+   background-size: fit, fit;
+   color: black !important;
+}
+
+.minion>.slide>p {font-size: 62% !important;}
+.minion>.slide h2 {margin-bottom: 350px;}
+.minion>.slide p {margin-left: 1em;}
+.minion a, .minion a code {color: #F55 !important; font-weight: bold;}
+.minion .links+ul>li {font-size: 50% !important; color: black !important;}
+
+.pack {font-size: 65% !important;}
+
+blockquote {font-size: 18px !important; color: white !important;}
+blockquote p {margin-bottom: .7em !important;}
+blockquote cite {float: right; font-size: 150% !important;}
+.noimgmargin img {margin: 0 !important;}
+.latex {color: #F55;}
+.bigeq {font-size: 75%;}
+.comment {background: white !important; height: auto !important;}
+img {margin-bottom: 0 !important; box-sizing: border-box;}
+
+em {color: #DD5;}
+.bordered {border: 1px solid #F55; }
+
+.custommap>div {height: 400px; float: left;}
+
+.allpadded img {padding: 15px; }
+.blurred {filter: blur(5px)}
+.fromblurred {
+    animation-duration: 5000ms;
+    animation-name: unblur;
+}
+@keyframes unblur {
+    0% {
+        filter: blur(5px);
+    }
+    to {
+        filter: blur(0px);
+    }
+}
+
+.no-h h2, .no-h h1 {display: none;}
+
+.blink {
+    animation-duration: 1300ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes blink {
+    0% {
+        color: #0F0;/*#F0F;*/
+    }
+    50% {
+        color: yellow;
+text-shadow: 0 0 20px white;
+filter: blur(0px);
+    }
+    100% {
+        color: red;
+/*filter: blur(2px);*/
+    }
+}
+
+            /* code highlighting height */
+            .auto .CodeMirror {height: auto !important;}
+            .dense {font-size: 66%;}
+
+            /* a few nicer slides */
+            .blackbg {background: black !important;}
+            .title-slide ul li { list-style: none; }
+            .title-slide ul {
+                font-size: 20px; color: darkgrey;
+                text-align: center;
+                position: absolute; bottom: 50px; left:0; right: 0;
+            }
+        </style>
+
+
+	<script src="deck-packed.js"></script>
+        <script>
+            var cssAndJs = ["codemirror", "dark-yellow-draft.css", "theme:"]; // include the theme (can add any css or js to the list)
+            var options = { PREFIX: '.', fitMarginY: 0 }; // to override default deck.js options
+            includedeck(cssAndJs, options);
+        </script>
+    </head>
+    <body class="NONONOhas-clones">
+        <div class="deck-container">
+
+            <!-- splash screen when loading -->
+            <div class="deck-loading-splash" style="background: black; color: chartreuse;">
+                <span class="vcenter" style="font-size: 30px; font-family: Arial; ">Please wait, while the deck is loading…</span>
+            </div>
+
+
+            <!-- --------------------------- -->
+            <!-- slides in extended markdown -->
+            <section class="smart">
+
+# <span class="var-title-br"></span> {*no-status title-slide} // comment
+- <span class="var-author"></span>
+- <span class="var-date"></span>
+- <span class="var-venue"></span>
+
+## Tonight
+- Personal Learning
+- Facilitating Learning
+- Resources
+- {notes}
+  - name, credential (interest and readings but no expert)
+  - hook: better at learning / helping other learn
+  - last point is also the credentiality
+  - ... before we start
+
+
+## `$ whoami` {darkened bottom-left noimgmargin /no-status}
+
+<img class="c6 floatright" src="media/software-carpentry-banner.png" style="background: white; padding: 1em;"/>
+<img class="c6 floatleft" src="media/fr-to-saint-etienne.jpg" style="padding: 1em 3em;"/>
+<img class="c6 floatleft" src="media/lthe.jpg"/>
+<img class="c6 floatright" src="media/idiap-abstract.png" style="background: white; padding: .5em;"/>
+
+- {notes}
+  - chercheur en ML, mais avant en archi log
+  - geek: des projets à coté, dont deck.js et des isochrones
+  - enseignant + swc instructor
+
+## {/no-status no-h}
+- `$ whoami` {no}
+    - Software Engineer
+    - Researcher: machine learning, computer vision
+    - Teacher: web technologies, computing literacy, …
+    - Geek: deck.js slides, isochrones, …
+
+
+
+
+<!-- ........................................... -->
+# Personal Learning
+
+## The Importance of the Mindsets
+<img src="media/mindsets.jpg"></img>
+
+- From *Teaching Adolescents to Become Learners: The Role of Non-cognitive Factors in Shaping School Performance*
+
+## Develop a Growth Mindset
+- Fixed mindset
+  - **intelligence is static**
+  - think you are good in some area
+  - and bad in others
+  - and that it can't change
+- Growth mindset {slide}
+  - **intelligence can be developed**
+  - believe you can learn anything
+  - if you put effort, work and practice
+
+## Take Care of Yourself
+- Do sport
+  - stimulates neural development
+  - reduces stress
+- Sleep well {slide}
+  - consolidates learning
+  - increase focus
+- Meditate, concentrate on a side activity {slide}
+  - reduces stress
+  - improves concentration capabilities
+
+## Basics Techniques, Compared
+<a href="http://bigthink.com/neurobonkers/assessing-the-evidence-for-the-one-thing-you-never-get-taught-in-school-how-to-learn">
+<img src="media/table-learning-techniques.jpg" ></a>
+
+- The <a href="http://psi.sagepub.com/content/14/1/4.full?ijkey=Z10jaVH/60XQM&keytype=ref&siteid=sppsi">scientific paper</a> and <a href="http://bigthink.com/neurobonkers/assessing-the-evidence-for-the-one-thing-you-never-get-taught-in-school-how-to-learn">a summary</a> (from which the above table is taken)
+
+## Take Care of your Learning
+- Plan your learning
+  - spaced/distributed/interleaved learning
+  - overview then details
+  - practice chunking (grouping ideas)
+- Switch between thinking modes: focused vs diffuse {slide}
+- Protect your learning {slide}
+  - cut distraction, avoid procrastination
+  - maximize focused attention
+  - ensure regular breaks
+- Use handwriting {slide}
+
+## Tool: the pomodoro technique {image-full bottom-left darkened /black-bg /no-status}
+<div class="img" style="background-image: url('media/pomorodo.jpg')" data-attribution="https://www.flickr.com/photos/callion/5525638094/sizes/l" data-attribution-content="CC by callion (Flickr)" data-scale=""></div>
+- {notes}
+  - focused (as it is time boxed)
+  - "ensures" breaks
+
+## Tool: flash cards {image-full bottom-left darkened /black-bg /no-status}
+<div class="img" style="background-image: url('media/flashcard.jpg')" data-attribution="https://www.flickr.com/photos/silverfuture/15201789553/sizes/l" data-attribution-content="CC by silverfuture (Flickr)" data-scale=""></div>
+
+## Tool: concept maps {image-full bottom-left darkened /black-bg /no-status}
+<div class="img" style="background-image: url('media/tmux-concepts.jpg')" ></div>
+
+
+
+<!-- ........................................... -->
+# Facilitating Learning
+
+## Key Points
+- Be enthusiastic
+- Know your "audience" // and interset
+  - levels: novice -> competent -> expert  {slide}
+      - zone of proximal development, scaffolding
+- Favor a sense of belonging {slide}
+  - fight the impostor syndrome
+  - watch <a href="https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are">Amy Cuddy</a>
+  - don't use "just"
+- Ensure the proper mindset {slide} // next
+
+## Growth Mindset {growth}
+- Do
+  - Emphasize learning goals
+  - Praise people for effort
+  - Attribute success to working hard
+  - Embrace mistakes
+  - Model learning from mistakes
+- Don't  {slide}
+  - Focus only on performance goals
+  - Praise people for getting the right answer without trying
+  - Describe certain youth as "smart"
+  - Reinforce self-criticism
+  - Maintain a fixed mindset about your own expertise
+
+
+## Tool: sticky notes {image-full top-left darkened /black-bg /no-status}
+<div class="img" style="background-image: url('media/stickies.jpg')" data-attribution="https://www.flickr.com/photos/glawie/7328941260/sizes/l" data-attribution-content="CC by geolawie (Flickr)" data-scale=""></div>
+- {side}
+  - display completion
+  - ask for help
+  - answer MCQ
+  - provide feedback
+
+## Peer Instruction: <br/>just in time teaching
+- Have people discuss and "teach" each others // also learning groups
+- Use to
+  - debunk misconceptions
+  - anticipate pain points
+- {notes}
+  -    Instructor poses question based on students' responses to their pre-class reading
+  -    Students reflect on the question
+  -    Students commit to an individual answer
+  -    Instructor reviews student responses
+  -    Students discuss their thinking and answers with their peers
+  -    Students then commit again to an individual answer
+  -    The instructor again reviews responses and decides whether more explanation is needed before moving on to the next concept.
+
+
+
+
+# Resources
+
+## Resources {.resources #ressss}
+- *How Learning Works: Seven Research-Based Principles for Smart Teaching* **Book by Marie K. Norman, Marsha C. Lovett, Michael W. Bridges, Michele DiPietro, and Susan A. Ambrose{subinfo}**
+- *Learning How to Learn: Powerful mental tools to help you master tough subjects* **MOOC by Barbara Oakley, Terrence Sejnowski {subinfo}**
+- *Software Carpentry Instructor Training* **<a href="https://swcarpentry.github.io/instructor-training/">live website</a> with the content that is used to train instructors involved in software carpentry{subinfo}** 
+- Wikipedia
+  - *zone of proximal development* <a href="https://en.wikipedia.org/wiki/Zone_of_proximal_development">…</a>
+  - *peer instruction* <a href="https://en.wikipedia.org/wiki/Peer_instruction">…</a>
+
+## Keep On Learning {image-full top-left darkened /black-bg /no-status}
+<div class="img" style="background-image: url('media/keep-on-learning.jpg')" data-attribution="https://www.flickr.com/photos/anned/8700093610/sizes/l" data-attribution-content="CC by Anne Davis 773 (Flickr)" data-scale=""></div>
+
+
+## Thanks! Questions? {deck-status-fake-end /minion}
+twitter: <a href="http://twitter.com/remiemonet/">`@remiemonet`</a>
+
+web/email: <a href="http://home.heeere.com">`http://home.heeere.com`</a>
+
+Recommended Links: see <a href="#ressss">resources</a>
+
+# {no-print}
+
+# Attribution
+
+# @chunk: attrib.md
+
+
+            </section>
+
+            <!-- footer and other decorations -->
+            <p class="deck-status deck-progress-10">
+                <span class="deck-status-current"></span> / <span class="deck-status-total"></span> − <span class="var-author">automatically replaced by the author</span> − <span class="var-title">automatically replaced by the title</span>
+            </p>
+
+
+        </div>
+    </body>
+
+</html>
